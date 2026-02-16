@@ -65,10 +65,7 @@ class MainActivity : ComponentActivity() {
                                     viewModel.uninstallPackage()
                                     finish()
                                 },
-                                onCancelClick = {
-                                    viewModel.reset()
-                                    finish()
-                                }
+                                onCancelClick = { finish() }
                             )
                         }
                         !hasApk -> {
@@ -79,10 +76,7 @@ class MainActivity : ComponentActivity() {
                                 apkInfo = apkInfo,
                                 installState = installState,
                                 onInstallClick = { viewModel.installApk() },
-                                onCancelClick = { 
-                                    viewModel.reset()
-                                    finish()
-                                },
+                                onCancelClick = { finish() },
                                 onOpenClick = {
                                     viewModel.openApp()
                                     finish()
@@ -100,6 +94,11 @@ class MainActivity : ComponentActivity() {
         super.onNewIntent(intent)
         setIntent(intent)
         handleIntent(intent)
+    }
+    
+    override fun onDestroy() {
+        viewModel.reset()
+        super.onDestroy()
     }
     
     private fun handleIntent(intent: Intent?) {
