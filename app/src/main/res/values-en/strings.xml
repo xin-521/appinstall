@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">App Installer</string>
+    <string name="install">Install</string>
+    <string name="uninstall">Uninstall</string>
+    <string name="cancel">Cancel</string>
+    <string name="installing">Installing…</string>
+    <string name="uninstalling">Uninstalling…</string>
+    <string name="install_success">Installed successfully</string>
+    <string name="install_failed">Installation failed</string>
+    <string name="uninstall_success">Uninstalled successfully</string>
+    <string name="uninstall_failed">Uninstallation failed</string>
+    <string name="app_info">App Info</string>
+    <string name="package_name">Package Name</string>
+    <string name="version">Version</string>
+    <string name="size">Size</string>
+    <string name="permissions">Permissions</string>
+    <string name="no_permissions">No permissions required</string>
+    <string name="open">Open</string>
+    <string name="done">Done</string>
+    <string name="error">Error</string>
+    <string name="invalid_apk">Invalid APK file</string>
+    <string name="file_not_found">File not found</string>
+    <string name="install_blocked">Install blocked</string>
+    <string name="enable_unknown_sources">Please allow installing from unknown sources</string>
+    <string name="settings">Settings</string>
+    <string name="confirm_install">Install this app?</string>
+    <string name="confirm_uninstall">Uninstall this app?</string>
+    <string name="notification_channel_install">Install Notifications</string>
+    <string name="notification_channel_install_desc">App installation and uninstallation status notifications</string>
+</resources>

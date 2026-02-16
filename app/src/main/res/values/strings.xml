@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">应用安装器</string>
+    <string name="install">安装</string>
+    <string name="uninstall">卸载</string>
+    <string name="cancel">取消</string>
+    <string name="installing">正在安装…</string>
+    <string name="uninstalling">正在卸载…</string>
+    <string name="install_success">安装成功</string>
+    <string name="install_failed">安装失败</string>
+    <string name="uninstall_success">卸载成功</string>
+    <string name="uninstall_failed">卸载失败</string>
+    <string name="app_info">应用信息</string>
+    <string name="package_name">包名</string>
+    <string name="version">版本</string>
+    <string name="size">大小</string>
+    <string name="permissions">权限</string>
+    <string name="signatures">签名</string>
+    <string name="no_permissions">无权限要求</string>
+    <string name="open">打开</string>
+    <string name="done">完成</string>
+    <string name="error">错误</string>
+    <string name="invalid_apk">无效的APK文件</string>
+    <string name="file_not_found">文件未找到</string>
+    <string name="install_blocked">安装被阻止</string>
+    <string name="enable_unknown_sources">请允许安装未知来源应用</string>
+    <string name="settings">设置</string>
+    <string name="confirm_install">确认安装此应用？</string>
+    <string name="confirm_uninstall">确认卸载此应用？</string>
+    <string name="notification_channel_install">安装通知</string>
+    <string name="notification_channel_install_desc">应用安装和卸载状态通知</string>
+    <string name="no_apk_title">打开 APK 文件进行安装</string>
+    <string name="no_apk_description">在文件管理器中点击 APK 文件，选择此应用打开即可安装</string>
+</resources>
