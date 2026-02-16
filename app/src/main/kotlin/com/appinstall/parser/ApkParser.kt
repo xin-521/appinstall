@@ -10,6 +10,7 @@ import android.os.Build
 import android.util.Log
 import com.appinstall.model.ApkInfo
 import java.io.File
+import java.security.MessageDigest
 
 class ApkParser(private val context: Context) {
     
@@ -46,6 +47,7 @@ class ApkParser(private val context: Context) {
             }
             
             val signatures = getApkSignatures(apkPath).toList()
+            val md5 = calculateMd5(apkFile)
             
             ApkInfo(
                 packageName = packageInfo.packageName,
@@ -62,6 +64,7 @@ class ApkParser(private val context: Context) {
                 installedVersionCode = installedVersionCode,
                 signatureMatch = signatureMatch,
                 signatures = signatures,
+                md5 = md5,
                 path = apkPath
             )
         } catch (e: Exception) {
@@ -212,6 +215,25 @@ class ApkParser(private val context: Context) {
         }
         
         return signatures
+    }
+    
+    private fun calculateMd5(file: File): String {
+        return try {
+            val md = MessageDigest.getInstance("MD5")
+            file.inputStream().use { input ->
+                val buffer = ByteArray(8192)
+                var bytesRead: Int
+                while (input.read(buffer).also { bytesRead = it } != -1) {
+                    md.update(buffer, 0, bytesRead)
+                }
+            }
+            md.digest().joinToString("") { byte ->
+                "%02x".format(byte)
+            }
+        } catch (e: Exception) {
+            Log.e(TAG, "Error calculating MD5", e)
+            ""
+        }
     }
     
     companion object {

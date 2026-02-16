@@ -87,8 +87,7 @@ class MainActivity : ComponentActivity() {
                                     viewModel.openApp()
                                     finish()
                                 },
-                                onDoneClick = { finish() },
-                                onBackPressed = { finish() }
+                                onDoneClick = { finish() }
                             )
                         }
                     }

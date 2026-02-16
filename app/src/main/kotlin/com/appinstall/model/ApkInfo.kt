@@ -17,6 +17,7 @@ data class ApkInfo(
     val installedVersionCode: Long?,
     val signatureMatch: Boolean,
     val signatures: List<String>,
+    val md5: String,
     val path: String
 ) {
     val sizeFormatted: String
